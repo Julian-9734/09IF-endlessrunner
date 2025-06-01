@@ -52,8 +52,6 @@ const powerupTypes = [
 ];
 
 // --- AUDIO ---
-const jumpSound = new Audio("https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg");
-const gameOverSound = new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
 const powerupSound = new Audio("https://actions.google.com/sounds/v1/cartoon/slide_whistle_to_drum_hit.ogg");
 
 // --- FUNKTION: NEUES HINDERNIS ---
@@ -228,7 +226,6 @@ function gameLoop() {
 
 // --- SPIELENDE ---
 function endGame() {
-  gameOverSound.play();
   gameRunning = false;
   document.getElementById("gameOverScreen").style.display = "block";
   canvas.style.display = "none";
