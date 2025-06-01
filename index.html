@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Endless Runner - Level Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="menu" style="text-align:center; margin-top:100px;">
+    <h1>Endless Runner</h1>
+    <button onclick="startGame()">Starten</button>
+    <p id="highscoreDisplay"></p>
+  </div>
+
+  <canvas id="gameCanvas" style="display:none;"></canvas>
+
+  <div id="gameOverScreen" style="display:none; text-align:center; margin-top: 100px;">
+    <h1>Game Over!</h1>
+    <p id="finalScore"></p>
+    <button onclick="restartGame()">Nochmal spielen</button>
+    <p id="highscoreAfterGame"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--- Java Script: https://www.youtube.com/watch?v=eWLDAAMsD-c --->
+<!--- HTML: https://www.youtube.com/watch?v=Q3MIitoSQkE --->
+<!--- CSS: https://www.youtube.com/watch?v=I84aQhbJl_Y --->
