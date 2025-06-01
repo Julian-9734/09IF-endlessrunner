@@ -1,0 +1,100 @@
+/* Grundstyles */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #87CEEB; /* Himmelblau */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  user-select: none; /* Kein Markieren beim Klick */
+}
+
+/* Canvas zentrieren mit Rand */
+#gameCanvas {
+  display: block;
+  background-color: #cce7ff; /* Heller Himmel */
+  margin: 20px auto;
+  border: 3px solid #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Menü Styles */
+#menu {
+  margin-top: 100px;
+  color: #222;
+}
+
+#menu h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #aaa;
+}
+
+#menu button {
+  padding: 12px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#menu button:hover {
+  background-color: #2980b9;
+}
+
+/* Game Over Screen */
+#gameOverScreen {
+  color: #222;
+  font-family: Arial, sans-serif;
+  margin-top: 100px;
+}
+
+#gameOverScreen h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px #777;
+}
+
+#gameOverScreen p {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+#gameOverScreen button {
+  padding: 12px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#gameOverScreen button:hover {
+  background-color: #c0392b;
+}
+
+/* Punktestand im Spiel (Canvas) */
+canvas + div {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #222;
+}
+
+/* Für Buttons und Textfelder ggf. noch Fokus-Styling */
+button:focus {
+  outline: 2px solid #555;
+  outline-offset: 2px;
+}
+
+/* Kleine Effekte für Powerup-Text, falls später im UI */
+.powerup-text {
+  font-weight: bold;
+  color: gold;
+  text-shadow: 1px 1px 2px #b8860b;
+}
