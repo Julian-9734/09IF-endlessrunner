@@ -51,6 +51,11 @@ const powerupTypes = [
   { width: 30, height: 30, color: "gold", effect: "invulnerable" }
 ];
 
+// --- AUDIO ---
+const jumpSound = new Audio("https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg");
+const gameOverSound = new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
+const powerupSound = new Audio("https://actions.google.com/sounds/v1/cartoon/slide_whistle_to_drum_hit.ogg");
+
 // --- FUNKTION: NEUES HINDERNIS ---
 function createObstacle() {
   const type = obstacleTypes[Math.floor(Math.random() * obstacleTypes.length)];
@@ -151,7 +156,7 @@ function update() {
 
   // Geschwindigkeit erhöhen
   if (score > 0 && score % 1000 === 0) {
-    speed += 1.5;
+    speed += 0.5;
   }
 
   // Punkte erhöhen
