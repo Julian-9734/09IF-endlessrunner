@@ -155,7 +155,7 @@ function update() {
   });
 
   // Geschwindigkeit erhöhen
-  if (score > 0 && score % 1000 === 0) {
+  if (score > 0 && score % 500 === 0) {
     speed += 0.5;
   }
 
