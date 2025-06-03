@@ -41,9 +41,9 @@ const backgroundLayers = [
 
 // --- HINDERNIS-TYPEN ---
 const obstacleTypes = [
-  { width: 30, height: 30, color: "red" },
-  { width: 20, height: 50, color: "purple" },
-  { width: 50, height: 20, color: "orange" }
+  { width: 50, height: 20, color: "red" },
+  { width: 10, height: 120, color: "red" },
+  { width: 150, height: 10, color: "red" }
 ];
 
 // --- POWERUP TYPEN ---
@@ -154,7 +154,7 @@ function update() {
 
   // Geschwindigkeit erhöhen
   if (score > 0 && score % 500 === 0) {
-    speed += 0.5;
+    speed += 3.0;
   }
 
   // Punkte erhöhen
