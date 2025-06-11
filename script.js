@@ -282,9 +282,10 @@ window.addEventListener("keydown", function(e) {
   }
 });
 
-// Mobile Touch-Steuerung
-canvas.addEventListener("touchstart", () => {
+canvas.addEventListener("touchstart", (e) => {
+  e.preventDefault(); // ✨ wichtig!
   if (!gameRunning) return;
+
   if (player.grounded || player.jumpCount < player.maxJumps) {
     player.velocityY = player.jumpForce;
     player.grounded = false;
@@ -292,7 +293,7 @@ canvas.addEventListener("touchstart", () => {
     player.color = "lightblue";
     setTimeout(() => (player.color = player.baseColor), 200);
   }
-});
+}, { passive: false }); // <- nötig, damit preventDefault funktioniert
 
 // --- Highscore beim Menü anzeigen ---
 document.getElementById("highscoreDisplay").innerText = "Highscore: " + highscore;
