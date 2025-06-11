@@ -282,5 +282,17 @@ window.addEventListener("keydown", function(e) {
   }
 });
 
+// Mobile Touch-Steuerung
+canvas.addEventListener("touchstart", () => {
+  if (!gameRunning) return;
+  if (player.grounded || player.jumpCount < player.maxJumps) {
+    player.velocityY = player.jumpForce;
+    player.grounded = false;
+    player.jumpCount++;
+    player.color = "lightblue";
+    setTimeout(() => (player.color = player.baseColor), 200);
+  }
+});
+
 // --- Highscore beim Menü anzeigen ---
 document.getElementById("highscoreDisplay").innerText = "Highscore: " + highscore;
