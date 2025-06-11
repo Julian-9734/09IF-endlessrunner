@@ -282,18 +282,5 @@ window.addEventListener("keydown", function(e) {
   }
 });
 
-canvas.addEventListener("touchstart", (e) => {
-  e.preventDefault(); // ✨ wichtig!
-  if (!gameRunning) return;
-
-  if (player.grounded || player.jumpCount < player.maxJumps) {
-    player.velocityY = player.jumpForce;
-    player.grounded = false;
-    player.jumpCount++;
-    player.color = "lightblue";
-    setTimeout(() => (player.color = player.baseColor), 200);
-  }
-}, { passive: false }); // <- nötig, damit preventDefault funktioniert
-
 // --- Highscore beim Menü anzeigen ---
 document.getElementById("highscoreDisplay").innerText = "Highscore: " + highscore;
