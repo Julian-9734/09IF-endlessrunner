@@ -17,6 +17,13 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+canvas {
+  touch-action: none; /* verhindert ungewolltes Scrollen/Ziehen auf Mobilgeräten */
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
 /* Menü Styles */
 #menu {
   margin-top: 100px;
